@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mumbai Indians – Official Fan Hub</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="animations.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-brand">
+      <div class="mi-logo-mini">
+        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="18" fill="#003B70" stroke="#C9A227" stroke-width="2" />
+          <text x="50%" y="58%" dominant-baseline="middle" text-anchor="middle" fill="#C9A227" font-size="14"
+            font-weight="bold" font-family="Bebas Neue">MI</text>
+        </svg>
+      </div>
+      <span class="brand-text">Mumbai Indians</span>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="nav-link active">Home</a></li>
+      <li><a href="#schedule" class="nav-link">Schedule</a></li>
+      <li><a href="#squad" class="nav-link">Squad</a></li>
+      <li><a href="#stats" class="nav-link">Stats</a></li>
+      <li><a href="#news" class="nav-link">News</a></li>
+      <li><a href="#fan-zone" class="nav-link">Fan Zone</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-bg-lines"></div>
+    <div class="hero-content">
+      <div class="hero-badge">IPL 2025 Season</div>
+      <h1 class="hero-title">
+        <span class="hero-title-line1">ONE</span>
+        <span class="hero-title-line2">FAMILY</span>
+        <span class="hero-accent-slash">/</span>
+        <span class="hero-title-line3">ONE DREAM</span>
+      </h1>
+      <p class="hero-sub">5× IPL Champions · Wankhede Stadium · Since 2008</p>
+      <div class="hero-cta-group">
+        <a href="#schedule" class="btn-primary">View Schedule</a>
+        <a href="#squad" class="btn-outline">Meet the Squad</a>
+      </div>
+    </div>
+    <div class="hero-logo-block">
+      <div class="mi-logo-wrapper">
+        <div class="mi-logo-halo"></div>
+        <div class="mi-logo-halo2"></div>
+        <img src="mi_logo.jpg" alt="Mumbai Indians Logo" class="mi-real-logo" />
+      </div>
+    </div>
+    <div class="hero-scroll-hint">↓ Scroll</div>
+  </section>
+
+  <!-- LIVE TICKER -->
+  <div class="ticker-bar">
+    <span class="ticker-live">● LIVE</span>
+    <div class="ticker-track">
+      <div class="ticker-content">
+        MI vs RCB — Rohit hits 67* off 42 | Bumrah 3 wickets in 4 overs |
+        Hardik Pandya named Player of the Match vs CSK | MI Training session at Wankhede —
+        Suryakumar in top form | Next match: MI vs KKR · April 28 · 7:30 PM IST |
+        MI vs RCB — Rohit hits 67* off 42 | Bumrah 3 wickets in 4 overs |
+      </div>
+    </div>
+  </div>
+
+  <!-- QUICK STATS BAR -->
+  <section class="quick-stats">
+    <div class="stat-card">
+      <div class="stat-num" data-target="251">0</div>
+      <div class="stat-lbl">Matches Won</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num" data-target="5">0</div>
+      <div class="stat-lbl">IPL Titles</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num" data-target="8">0</div>
+      <div class="stat-lbl">Finals Reached</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num" data-target="25">0</div>
+      <div class="stat-lbl">Players in Squad</div>
+    </div>
+  </section>
+
+  <!-- MATCH SCHEDULE -->
+  <section class="section schedule-section" id="schedule">
+    <div class="section-header">
+      <span class="section-eyebrow">IPL 2025</span>
+      <h2 class="section-title">Match Schedule</h2>
+    </div>
+    <div class="schedule-filter">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="home">Home</button>
+      <button class="filter-btn" data-filter="away">Away</button>
+      <button class="filter-btn" data-filter="upcoming">Upcoming</button>
+    </div>
+    <div class="schedule-list" id="scheduleList">
+      <!-- Injected by schedule.js -->
+    </div>
+  </section>
+
+  <!-- SQUAD -->
+  <section class="section squad-section" id="squad">
+    <div class="section-header">
+      <span class="section-eyebrow">2025 Roster</span>
+      <h2 class="section-title">The Squad</h2>
+    </div>
+    <div class="squad-filter">
+      <button class="filter-btn active" data-role="all">All</button>
+      <button class="filter-btn" data-role="batsman">Batters</button>
+      <button class="filter-btn" data-role="bowler">Bowlers</button>
+      <button class="filter-btn" data-role="allrounder">All-Rounders</button>
+      <button class="filter-btn" data-role="wk">Wicket-Keepers</button>
+    </div>
+    <div class="players-grid" id="playersGrid">
+      <!-- Injected by players.js -->
+    </div>
+  </section>
+
+  <!-- PLAYER MODAL -->
+  <div class="modal-overlay" id="playerModal">
+    <div class="modal-box">
+      <button class="modal-close" id="modalClose">✕</button>
+      <div class="modal-content" id="modalContent"></div>
+    </div>
+  </div>
+
+  <!-- TEAM STATS -->
+  <section class="section stats-section" id="stats">
+    <div class="section-header">
+      <span class="section-eyebrow">Performance</span>
+      <h2 class="section-title">Team Statistics</h2>
+    </div>
+    <div class="stats-grid">
+      <div class="stats-card wide">
+        <h3>IPL 2025 Season Overview</h3>
+        <div class="season-bar-group" id="seasonBars">
+          <!-- Injected by stats.js -->
+        </div>
+      </div>
+      <div class="stats-card">
+        <h3>Win / Loss Ratio</h3>
+        <canvas id="winLossChart" width="260" height="260"></canvas>
+        <div class="donut-legend">
+          <span class="legend-dot win"></span> Wins (68%)
+          <span class="legend-dot loss"></span> Losses (32%)
+        </div>
+      </div>
+      <div class="stats-card">
+        <h3>Top Run Scorers (2025)</h3>
+        <div class="top-scorers" id="topScorers"></div>
+      </div>
+      <div class="stats-card">
+        <h3>Top Wicket Takers (2025)</h3>
+        <div class="top-scorers" id="topWickets"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWS -->
+  <section class="section news-section" id="news">
+    <div class="section-header">
+      <span class="section-eyebrow">Latest</span>
+      <h2 class="section-title">News & Updates</h2>
+    </div>
+    <div class="news-grid" id="newsGrid">
+      <!-- Injected by news.js -->
+    </div>
+  </section>
+
+  <!-- FAN ZONE -->
+  <section class="section fan-section" id="fan-zone">
+    <div class="section-header">
+      <span class="section-eyebrow">Community</span>
+      <h2 class="section-title">Fan Zone</h2>
+    </div>
+    <div class="fan-grid">
+
+      <!-- POLL -->
+      <div class="fan-card poll-card">
+        <h3>Fan Poll</h3>
+        <p class="poll-question" id="pollQuestion">Who will be MI's Player of the Tournament 2025?</p>
+        <div class="poll-options" id="pollOptions"></div>
+        <div class="poll-result" id="pollResult" style="display:none"></div>
+      </div>
+
+      <!-- SOCIAL WALL -->
+      <div class="fan-card social-card">
+        <h3>Social Buzz <span class="tag">#MumbaiIndians</span></h3>
+        <div class="social-feed" id="socialFeed"></div>
+      </div>
+
+      <!-- CHANT BOARD -->
+      <div class="fan-card chant-card">
+        <h3>Fan Chant Board</h3>
+        <div class="chant-display" id="chantDisplay">
+          <div class="chant-text">🎵 Duniya Hila De Re… MUMBAI INDIANS! 🎵</div>
+        </div>
+        <div class="chant-input-area">
+          <input type="text" id="chantInput" placeholder="Drop your chant here..." maxlength="80" />
+          <button id="chantSubmit" class="btn-primary small">Send</button>
+        </div>
+        <div class="chant-feed" id="chantFeed"></div>
+      </div>
+
+      <!-- TRIVIA -->
+      <div class="fan-card trivia-card">
+        <h3>MI Trivia Quiz</h3>
+        <div id="triviaContent"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-brand">
+      <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg" width="48">
+        <circle cx="25" cy="25" r="23" fill="#003B70" stroke="#C9A227" stroke-width="2" />
+        <text x="50%" y="60%" dominant-baseline="middle" text-anchor="middle" fill="#C9A227" font-size="18"
+          font-weight="bold" font-family="Bebas Neue">MI</text>
+      </svg>
+      <div>
+        <div class="footer-name">Mumbai Indians</div>
+        <div class="footer-tagline">One Family. One Dream.</div>
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="#home">Home</a>
+      <a href="#schedule">Schedule</a>
+      <a href="#squad">Squad</a>
+      <a href="#stats">Stats</a>
+      <a href="#news">News</a>
+      <a href="#fan-zone">Fan Zone</a>
+    </div>
+    <div class="footer-social">
+      <a href="#" aria-label="Twitter" class="social-icon">𝕏</a>
+      <a href="#" aria-label="Instagram" class="social-icon">IG</a>
+      <a href="#" aria-label="YouTube" class="social-icon">YT</a>
+      <a href="#" aria-label="Facebook" class="social-icon">FB</a>
+    </div>
+    <div class="footer-copy">© 2025 Mumbai Indians Fan Hub · Built with 💙 for the Blue Army</div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="schedule.js"></script>
+  <script src="players.js"></script>
+  <script src="stats.js"></script>
+  <script src="news.js"></script>
+  <script src="fanzone.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
